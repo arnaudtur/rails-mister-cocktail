@@ -1,0 +1,25 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @cocktail.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">XXX</h6>
+    <p class="card-text">XXX</p>
+    <p class="card-text">XXXX</p>
+
+  </div>
+</div>
+
+
+<%= link_to "Edit", edit_cocktail_path %>
+</br>
+
+<%= link_to "Delete #{@cocktail.name}",
+            cocktail_path(@cocktail),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+</br>
+
+<%= link_to "Go back to index", cocktails_path %>
+</br>
+
+

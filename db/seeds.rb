@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# db/seeds.rb
+
+Cocktail.create(name: "London Mule")
+Cocktail.create(name: "Dark & Stormy")
+
+

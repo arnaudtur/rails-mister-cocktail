@@ -1,0 +1,13 @@
+cocktail
+<!-- app/views/cocktails/index.html.erb -->
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li><%= link_to cocktail.name, cocktail_path(cocktail) %>
+
+</br></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add a new Cocktail",  new_cocktail_path %>
+

@@ -1,0 +1,9 @@
+<h1 class="text-center">Add a new cocktail</h1>
+<div class="container">
+<%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Submit cocktail", class: "btn btn-primary" %>
+  <% end %>
+<br><br><br>
+  <a href="http://localhost:3000/cocktails" class="btn-home" role="button" aria-disabled="true"><p>Home</p></a>
+</div>
