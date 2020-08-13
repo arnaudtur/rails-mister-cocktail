@@ -15,9 +15,6 @@
       <img class="card-img-top" src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
-        <% cocktail.doses.each do |dose| %>
-        <p class="card-text"><%= dose.ingredient.name %> </p>
-        <% end %>
         <%= link_to "See details", cocktail_path(cocktail), class:"btn btn-primary" %>
       </div>
     </div>
