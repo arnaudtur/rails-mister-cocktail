@@ -2,7 +2,7 @@
   <div class="containerx">
     <h1>Mister Cocktail ! </h1>
     <p>Do & Share your own cocktails</p>
-    <%= link_to "Add a new Cocktail",  new_cocktail_path, class:"btn btn-primary" %>
+    <%= link_to "Add a new Cocktail",  new_cocktail_path, class:"btn-gradientx" %>
   </div>
 </div>
 <br>
@@ -12,7 +12,7 @@
 
   <% @cocktails.each do |cocktail| %>
     <div class="card m-3" style="width: 18rem;">
-      <img class="card-img-top" src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="Card image cap">
+      <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill,  class:"card-img-top" %>
       <div class="card-body">
         <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
         <%= link_to "See details", cocktail_path(cocktail), class:"btn btn-primary" %>
@@ -22,4 +22,6 @@
 </div>
 
 </div>
+
+
 

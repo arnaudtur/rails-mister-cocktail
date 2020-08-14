@@ -10,6 +10,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 
+
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -26,6 +28,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
+gem 'active_storage_validations'
+
+
 # gem 'image_processing', '~> 1.2'
 
 gem 'autoprefixer-rails'

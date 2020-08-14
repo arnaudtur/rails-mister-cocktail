@@ -1,34 +1,36 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title"><%= @cocktail.name %></h5>
-    <h6 class="card-subtitle mb-2 text-muted">XXX</h6>
-    <p class="card-text">XXXX</p>
+
+
+
+<div class="shows">
+  <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Ingredient of <%= @cocktail.name %>
   </div>
+  <ul class="list-group list-group-flush">
+      <% @cocktail.doses.each do |dose| %>
+
+    <li class="list-group-item"><%= dose.ingredient.name %> : <%= dose.description %> <%= link_to "X",
+            dose_path(dose), class:"text-right",
+            method: :delete,
+            data: { confirm: "Are you sure?" }%></li>
+    <% end %>
+  </ul>
 </div>
 
-<ul class="list-group">
-  <% @cocktail.doses.each do |dose| %>
-    <li class="list-group-item"><%= dose.ingredient.name %> : <%= dose.description %> <%= link_to "Delete #{dose.description} #{dose.ingredient.name}",
-            dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %></li>
-</ul>
 
 
-</br><% end %>
 
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
 
 
 
 
 
 <%= link_to 'Add Ingredients/Doses', new_cocktail_dose_path(@cocktail) %>
-</br>
-</br>
+
 </br>
 <%= link_to "Edit", edit_cocktail_path %>
 </br>
 
 <%= link_to "Go back to index", cocktails_path %>
 
+</div>
