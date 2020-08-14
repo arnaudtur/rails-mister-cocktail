@@ -17,4 +17,4 @@
 #   Ingredient.create(name: drink['strIngredient1'])
 # end
 
-Cocktail.create(:name "dodo")
+Cocktail.create(name: "dodo")
