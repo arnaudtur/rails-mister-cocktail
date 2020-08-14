@@ -16,7 +16,7 @@
 # ingredient['drinks'].each do |drink|
 #   Ingredient.create(name: drink['strIngredient1'])
 # end
-Cocktail.destroy
+Cocktail.destroy_all
 require 'json'
 require 'open-uri'
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
